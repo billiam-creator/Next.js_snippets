@@ -1,68 +1,76 @@
 import Image from 'next/image'
 import Button from './components/button'
 
-export default function Home(){
-  return(
-    <main className="min-h-screen flex items-center justify-center">
-      {/* -----Background Image------ */}
+export default function Home() {
+  return (
+    <main className="relative h-screen w-full flex flex-col overflow-hidden text-white">
+      
+      {/* 1. Background Image */}
       <Image
-      src="/tyre_image2.jpg"
-      alt='Tyre Background'
-      fill   //makes image fill parent
-      className='object-cover -z-10'
-      priority  // loads image faster
+        src="/tyre_image2.jpg"
+        alt="Background"
+        fill
+        className="object-cover -z-20"
+        priority
       />
-     {/*----------content------ */}
 
-     <div className="relative z-10 space-y-6 max-w-3xl px-8 text-center">
-  <div className="space-y-3">
-    <h1 className="text-5xl font-bold text-white drop-shadow-lg">
-      DOMINATE THE ROAD WITH VELOCITY
-    </h1>
-    <h2 className='text-3xl text-white'>
-      Performance, Safety, and Style for Every Drive
-    </h2>
-    <p className="text-gray-100 text-lg">
-      Explore our curated collection of premium tyres for passenger
-      vehicles, SUVs, and performance cars. Get them expertly fitted
-      at your convenience.
-    </p>
-  </div>
+      {/* 2. Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/30 to-transparent -z-10" />
 
-  {/* 4. Use the reusable component twice here */}
-  <div className='flex gap-4 justify-center'>
-    <Button text="SHOP ALL TYRES" variant="solid" />
-    <Button text="FIND YOUR TYRE SIZES" variant="outline" />
-  </div>
+      {/*content section */}
+      
+      <div className="relative z-10 flex-1 flex flex-col justify-start pt-40 px-10 md:px-24">
+        
+        <div className="max-w-2xl space-y-6">
+          
+          {/* Header Section */}
+          <div className="space-y-1">
+            
+            <h1 className="text-4xl md:text-5xl font-black leading-[1.1] uppercase tracking-tighter">
+              Dominate the Road <br /> With Velocity
+            </h1>
+            <p className="text-lg md:text-xl font-semibold opacity-90 text-blue-400">
+              Performance, Safety, and Style for Every Drive.
+            </p>
+          </div>
 
-  {/* --- The Finder Box --- */}
-<div className="mt-12 bg-black/60 backdrop-blur-md p-6 rounded-2xl border border-white/10 w-full max-w-2xl mx-auto">
-  <h3 className="text-xl font-bold text-white mb-4 text-left">
-    FIND THE RIGHT TYRES FOR YOUR VEHICLE
-  </h3>
-  
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-  
-  <input 
-    type="text" 
-    placeholder="Width (e.g. 205)" 
-    className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-  />
+          {/* Subtext */}
+          <p className="text-gray-300 text-sm md:text-base max-w-md leading-relaxed">
+            Explore our curated collection of premium tyres for passenger
+            vehicles, SUVs, and performance cars. Get them expertly fitted
+            at your convenience.
+          </p>
 
+          {/* Action Buttons */}
+          <div className="flex gap-4">
+            <Button text="SHOP ALL TYRES" variant="solid" />
+            <Button text="FIND YOUR TYRE SIZES" variant="outline" />
+          </div>
 
-  <input 
-    type="text" 
-    placeholder="Profile (e.g. 55)" 
-    className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-  />
+          {/* --- Tyre Finder Field --- */}
+          <div className="w-full max-w-lg bg-black/40 backdrop-blur-md p-5 rounded-xl border border-white/10 shadow-2xl mt-4">
+            <p className="text-[10px] font-bold text-gray-400 mb-3 tracking-[0.2em] uppercase">
+              Start Your Tyre Finder
+            </p>
+            <div className="flex gap-2">
+              <input 
+                type="text" 
+                placeholder="Car Make" 
+                className="flex-1 bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white outline-none focus:ring-1 focus:ring-blue-500"
+              />
+              <input 
+                type="text" 
+                placeholder="Car Model" 
+                className="flex-1 bg-white/5 border border-white/10 rounded px-3 py-2 text-xs text-white outline-none focus:ring-1 focus:ring-blue-500"
+              />
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded text-[10px] tracking-widest uppercase">
+                FIND
+              </button>
+            </div>
+          </div>
 
-</div>
-<button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all 
-shadow-lg active:scale-95">Find</button>
-</div>
-
- 
-</div>
+        </div>
+      </div>
     </main>
   )
 }
