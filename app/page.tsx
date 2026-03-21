@@ -35,6 +35,32 @@ export default function Home(){
     <Button text="FIND YOUR TYRE SIZES" variant="outline" />
   </div>
 
+  {/* --- The Finder Box --- */}
+<div className="mt-12 bg-black/60 backdrop-blur-md p-6 rounded-2xl border border-white/10 w-full max-w-2xl mx-auto">
+  <h3 className="text-xl font-bold text-white mb-4 text-left">
+    FIND THE RIGHT TYRES FOR YOUR VEHICLE
+  </h3>
+  
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+  
+  <input 
+    type="text" 
+    placeholder="Width (e.g. 205)" 
+    className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+
+
+  <input 
+    type="text" 
+    placeholder="Profile (e.g. 55)" 
+    className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+
+</div>
+<button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all 
+shadow-lg active:scale-95">Find</button>
+</div>
+
  
 </div>
     </main>
