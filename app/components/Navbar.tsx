@@ -10,6 +10,7 @@ const Navbar = () => {
      <Link href="/" className='transition duration-300
      hover:scale-110'>
         <RiNextjsFill className='w-16 h-16'></RiNextjsFill>
+        
 
      </Link>
      <ul className='flex gap-10 text-lg'>
