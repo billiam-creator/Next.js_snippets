@@ -19,9 +19,16 @@ export default function Home() {
 
       {/*content section */}
       
-      <div className="relative z-10 flex-1 flex flex-col justify-start pt-40 px-10 md:px-24">
+      <div className="relative z-10 flex-1 flex flex-col justify-start pt-27 px-10 md:px-24">
         
         <div className="max-w-2xl space-y-6">
+
+        <div className="flex items-center gap-2 bg-blue-600 text-white px-2 py-1 rounded-full w-fit text-[13px] font-medium mb-4 mb-6">
+  <span className="bg-white text-blue-600 px-1.5 py-0.5 rounded-full text-[10px] font-bold uppercase">
+    ke
+  </span>
+  <span className="pr-1">Nairobi's #1 tyre broker</span>
+</div>
           
           {/* Header Section */}
           <div className="space-y-1">
