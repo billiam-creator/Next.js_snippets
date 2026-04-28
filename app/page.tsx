@@ -71,19 +71,30 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Featured Tyres Section */}
-          <div className="py-20">
-            <h2 className="text-3xl font-black uppercase tracking-tight text-white mb-2">OUR TOP PICKS FOR THE ROAD</h2>
-            <p className="text-gray-400 max-w-xl">
-              Explore our hand-picked selection of high-performance and reliable tyres, vetted by our experts in Nairobi.
-            </p>
-            {/* Tyre cards would go here */}
-            <div className="h-64 border-2 border-dashed border-white/10 rounded-xl mt-8 flex items-center justify-center text-gray-500">
-              Featured Tyre Cards Grid Component
-            </div>
-          </div>
+         
 
         </div>
+         {/* Featured Tyres Section */}
+         <div className="py-20">
+          <div className='grid items-center text-center'>
+            <h2 className="text-3xl font-black uppercase tracking-tight text-white mb-2">OUR TOP PICKS FOR THE ROAD</h2>
+            <p className="text-blue-400 ">
+              Explore our hand-picked selection of high-performance and reliable tyres, vetted by our experts in Nairobi.
+            </p>
+            </div>
+
+            {/*---categories ------*/}
+            <div className='flex gap-4 justify-center mt-5'>
+              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit'>[ ALL ]</button>
+              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit'>[ HIGH PERFOMANCE ]</button>
+              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit'>[ SUV / 4X4 ]</button>
+              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit'>[ ECO & TOURING]</button>
+
+            </div>
+
+            
+          </div>
+         
       </div>
     </main>
   )
