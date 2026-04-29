@@ -113,6 +113,11 @@ export default function Home() {
                   />
                 ))}
               </div>
+
+              {/*--- see all button*/}
+              <div className='flex justify-center mt-7'>
+                <button className='bg-blue-500 rounded-full py-2 px-2 hover:bg-gray-700'>SEE ALL FEATURED TYRES</button>
+              </div>
             
           </div>
          
