@@ -1,7 +1,15 @@
 import Image from 'next/image'
 import Button from './components/button'
+import TyreCard from './components/TyreCard';
 
 export default function Home() {
+  //Data Array
+  const featuredTyres = [
+    { brand: 'Michelin', model: 'Pilot Sport 5', price: '24,500', image: '/michelin.jpg', tag: 'Best Seller' },
+    { brand: 'Goodyear', model: 'Eagle F1 Asymmetric 6', price: '19,800', image: '/goodyear.jpg', tag: 'High Grip' },
+    { brand: 'Continental', model: 'SportContact 7', price: '31,000', image: '/sportcontact.jpg', tag: 'Premium Comfort' },
+    { brand: 'Pirelli', model: 'P Zero (PZ4)', price: '28,900', image: '/pirelli.jpg', tag: 'Sport Style' },
+  ];
   return (
     <main className="relative min-h-screen w-full flex flex-col text-white">
       
@@ -91,7 +99,20 @@ export default function Home() {
               <button className='bg-blue-600 px-3 py-2 rounded-full w-fit'>[ ECO & TOURING]</button>
 
             </div>
-
+            {/*--- map function --- */}
+            {/* -- grid layout -- */}
+              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-7xl mx-auto'>
+                {featuredTyres.map((tyre, index) =>(
+                  <TyreCard
+                  key={index}
+                  brand={tyre.brand}
+                  model={tyre.model}
+                  price={tyre.price}
+                  image={tyre.image}
+                  tag={tyre.tag}
+                  />
+                ))}
+              </div>
             
           </div>
          
