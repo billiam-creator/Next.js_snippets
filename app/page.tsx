@@ -93,10 +93,10 @@ export default function Home() {
 
             {/*---categories ------*/}
             <div className='flex gap-4 justify-center mt-5'>
-              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit'>[ ALL ]</button>
-              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit'>[ HIGH PERFOMANCE ]</button>
-              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit'>[ SUV / 4X4 ]</button>
-              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit'>[ ECO & TOURING]</button>
+              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit hover:bg-gray-700'>[ ALL ]</button>
+              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit hover:bg-gray-700'>[ HIGH PERFOMANCE ]</button>
+              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit hover:bg-gray-700'>[ SUV / 4X4 ]</button>
+              <button className='bg-blue-600 px-3 py-2 rounded-full w-fit hover:bg-gray-700'>[ ECO & TOURING]</button>
 
             </div>
             {/*--- map function --- */}
@@ -116,7 +116,7 @@ export default function Home() {
 
               {/*--- see all button*/}
               <div className='flex justify-center mt-7'>
-                <button className='bg-blue-500 rounded-full py-2 px-2 hover:bg-gray-700'>SEE ALL FEATURED TYRES</button>
+                <button className='bg-blue-500 rounded-full py-2 px-2 transition-all hover:border-blue-500 hover:scale-[1.12] group'>SEE ALL FEATURED TYRES</button>
               </div>
             
           </div>
