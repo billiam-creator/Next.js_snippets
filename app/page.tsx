@@ -2,10 +2,12 @@ import Image from 'next/image'
 import Button from './components/button'
 import TyreCard from './components/TyreCard';
 import FeatureCard from './components/FeatureCard';
-import { ShieldCheck, Truck, Wrench, Tag, Wallet, Headset } from 'lucide-react';
+import { ShieldCheck, Truck, Wrench, Tag, Wallet, Headset, Users, Disc, Star, MapPin } from 'lucide-react';
+import StatsBar from './components/StatsBar';
+
 
 export default function Home() {
-  // 1. Featured Tyres Data
+  // 1. Featured Tyres Data array
   const featuredTyres = [
     { brand: 'Michelin', model: 'Pilot Sport 5', price: '24,500', image: '/michelin.jpg', tag: 'Best Seller' },
     { brand: 'Goodyear', model: 'Eagle F1 Asymmetric 6', price: '19,800', image: '/goodyear.jpg', tag: 'High Grip' },
@@ -13,7 +15,7 @@ export default function Home() {
     { brand: 'Pirelli', model: 'P Zero (PZ4)', price: '28,900', image: '/pirelli.jpg', tag: 'Sport Style' },
   ];
 
-  // 2. Why Choose Us Data
+  // 2. Why Choose Us Data array
   const featureCardsData = [
     { 
         heading: 'PREMIUM QUALITY TYRES', 
@@ -39,7 +41,7 @@ export default function Home() {
         heading: 'PAY ON DELIVERY', 
         description: "Pay when your tyres are delivered and you're satisfied. Safe, simple, and convenient.", 
         icon: Wallet,
-        isActive: true // Triggers the blue highlight in FeatureCard
+        isActive: true // Triggers blue highlight in FeatureCard
     },
     { 
         heading: '24/7 CUSTOMER SUPPORT', 
@@ -47,6 +49,13 @@ export default function Home() {
         icon: Headset 
     }
   ];
+
+  const statsData = [
+    {label:'Happy Customers', value:'500+', icon: Users},
+    {label:'Tyres Sold', value:'1000+', icon: Disc},
+    {label:'Customer Rating', value:'4.8', icon:Star },
+    {label:'Proudly Serving', value:'Nairobi', icon: MapPin},
+  ]
 
   return (
     <main className="relative min-h-screen w-full flex flex-col text-white">
@@ -169,6 +178,16 @@ export default function Home() {
         </section>
 
         {/* --- STATS BAR WILL GO HERE --- */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto w-full px-6 mt-10'>
+  {statsData.map((item, index) => (
+    <StatsBar
+      key={index}
+      label={item.label}
+      value={item.value}
+      icon={item.icon}
+    />
+  ))}
+</div>
 
       </div>
     </main>
