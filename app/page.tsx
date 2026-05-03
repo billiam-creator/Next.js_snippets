@@ -41,7 +41,8 @@ export default function Home() {
         heading: 'PAY ON DELIVERY', 
         description: "Pay when your tyres are delivered and you're satisfied. Safe, simple, and convenient.", 
         icon: Wallet,
-        isActive: true // Triggers blue highlight in FeatureCard
+        isActive: true, // Triggers blue highlight in FeatureCard
+        tag: 'CASH ON DELIVERY'
     },
     { 
         heading: '24/7 CUSTOMER SUPPORT', 
@@ -172,6 +173,7 @@ export default function Home() {
                 description={item.description}
                 icon={item.icon}
                 isActive={item.isActive}
+                tag={item.tag}
               />
             ))}
           </div>

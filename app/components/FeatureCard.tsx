@@ -5,9 +5,10 @@ interface FeatureCardProps {
     description: string;
     icon: LucideIcon; 
     isActive?: boolean; 
+    tag?: string
 }
 
-const FeatureCard = ({ heading, description, icon: Icon, isActive }: FeatureCardProps) => {
+const FeatureCard = ({ heading, description, icon: Icon, isActive, tag }: FeatureCardProps)=>{
     return (
         /* Parent Card  */
         <div className={`bg-[#0A0A0A] border rounded-2xl p-8 transition-all duration-300 flex flex-col gap-6 ${
@@ -29,6 +30,12 @@ const FeatureCard = ({ heading, description, icon: Icon, isActive }: FeatureCard
                 <p className="text-gray-400 text-sm leading-relaxed">
                     {description}
                 </p>
+
+                {tag && (
+        <span className="inline-block bg-blue-600 text-[10px] font-black px-3 py-1 rounded-full text-white uppercase tracking-wider">
+          {tag}
+        </span>
+      )}
             </div>
         </div>
     );
